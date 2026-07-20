@@ -1,9 +1,11 @@
 Package: lgbthue
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: c(person("Laura", "Bakala",
+             email = "erdaradun.gaztea@gmail.com",
+             role = c("cre", "aut", "cph"),
+             comment = c(ORCID = "0000-0002-3213-2484")))
+Description: Provides palette data for pride flags for use by packages like 'gglgbtq'.
 License: GPL (>= 3)
 Suggests: 
     testthat (>= 3.0.0)
