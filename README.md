@@ -9,6 +9,9 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/lgbthue)](https://CRAN.R-project.org/package=lgbthue)
+[![R-CMD-check](https://github.com/ErdaradunGaztea/lgbthue/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ErdaradunGaztea/lgbthue/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/ErdaradunGaztea/lgbthue/graph/badge.svg)](https://app.codecov.io/gh/ErdaradunGaztea/lgbthue)
 <!-- badges: end -->
 
 The goal of lgbthue is to provide palette data for pride flags for use
