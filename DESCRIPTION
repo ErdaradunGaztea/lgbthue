@@ -8,6 +8,7 @@ Authors@R: c(person("Laura", "Bakala",
 Description: Provides palette data for pride flags for use by packages like 'gglgbtq'.
 License: GPL (>= 3)
 Suggests: 
+    checkmate,
     purrr,
     testthat (>= 3.0.0),
     usethis
