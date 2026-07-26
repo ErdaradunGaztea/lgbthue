@@ -14,7 +14,7 @@
 #' @export
 palette_lgbtq <- function(name) {
   if (!name %in% names(.pride)) {
-    rlang::abort(sprintf("Palette '%s' not recognized as lgbthue palette.", name))
+    stop(sprintf("Palette '%s' not recognized as lgbthue palette.", name), call. = FALSE)
   }
 
   structure(
