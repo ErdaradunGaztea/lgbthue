@@ -7,12 +7,12 @@
   ),
   lesbian = list(
     colors = c("#D62900", "#FF9B55", "#FFFFFF", "#D461A6", "#A50062"),
-    aliases = c("les", "gay woman", "wlw"),
+    aliases = c("les", "gay_woman", "wlw"),
     tags = c("sexuality")
   ),
   gay = list(
     colors = c("#078D70", "#98E8C1", "#FFFFFF", "#7BADE2", "#3D1A78"),
-    aliases = c("gay man", "mlm"),
+    aliases = c("gay_man", "mlm"),
     tags = c("sexuality")
   ),
   bisexual = list(

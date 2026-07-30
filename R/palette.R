@@ -15,6 +15,11 @@
 palette_lgbtq <- function(name) {
   checkmate::assert_string(name)
 
+  # Replace spaces with underscores
+  name <- gsub(" ", "_", name)
+  # Standardize to lowercase
+  name <- tolower(name)
+
   if (!name %in% names(.pride_alias_dict)) {
     # TODO: Add mention of `show_pride()`
     stop(sprintf("Palette '%s' not recognized as lgbthue palette.", name), call. = FALSE)
