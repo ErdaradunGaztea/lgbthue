@@ -10,7 +10,8 @@ License: GPL (>= 3)
 Depends: 
     R (>= 3.5)
 Imports: 
-    checkmate
+    checkmate,
+    cli
 Suggests: 
     ellipsis,
     mockery,

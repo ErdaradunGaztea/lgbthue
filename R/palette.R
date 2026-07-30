@@ -28,9 +28,9 @@ palette_lgbtq <- function(name) {
 }
 
 #' @export
-print.lgbtq_palette <- function(x, ...,
-                                background = getOption("gglgbtq_bg"),
-                                font_size = getOption("gglgbtq_font_size")) {
+plot.lgbtq_palette <- function(x, ...,
+                               background = getOption("gglgbtq_bg"),
+                               font_size = getOption("gglgbtq_font_size")) {
   old <- graphics::par()[c("mar", "bg")]
   on.exit(graphics::par(old))
 

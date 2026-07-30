@@ -220,6 +220,14 @@ tags <- purrr::map(.pride, \(palette) {
   })
 )
 
+.pride <- .pride |>
+  purrr::imap(\(palette, name) {
+    palette |>
+      purrr::list_assign(name = name) |>
+      structure(class = "lgbtq_palette_data")
+  }) |>
+  structure(class = "lgbtq_palette_list")
+
 usethis::use_data(
   .pride, .pride_alias_dict, .pride_tag_dict, .pride_size_dict,
   internal = TRUE, overwrite = TRUE
