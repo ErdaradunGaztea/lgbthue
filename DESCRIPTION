@@ -7,8 +7,12 @@ Authors@R: c(person("Laura", "Bakala",
              comment = c(ORCID = "0000-0002-3213-2484")))
 Description: Provides palette data for pride flags for use by packages like 'gglgbtq'.
 License: GPL (>= 3)
+Depends: 
+    R (>= 3.5)
+Imports: 
+    checkmate
 Suggests: 
-    checkmate,
+    mockery,
     purrr,
     testthat (>= 3.0.0),
     usethis
@@ -17,5 +21,3 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 URL: https://erdaradungaztea.github.io/lgbthue/
-Depends: 
-    R (>= 3.5)

@@ -1,3 +1,5 @@
+# palette_lgbtq() --------------------------------------------------------------
+## Output ----
 test_that("returns a palette", {
   for (name in names(.pride)) {
     expect_s3_class(
@@ -31,4 +33,17 @@ test_that("palettes have single-string names", {
       size = 1
     )
   }
+})
+
+## Input ----
+test_that("`name` must be a single non-null string", {
+  needs_string("name", palette_lgbtq("rainbow"))
+})
+
+test_that("`name` must be one of existing palette names", {
+  expect_snapshot(
+    palette_lgbtq("non-existent"),
+    cran = TRUE,
+    error = TRUE
+  )
 })
