@@ -25,5 +25,9 @@ strings.
 
 ``` r
 palette_lgbtq("bisexual")
-
+#> bisexual [3]
+#>  █ #D00070
+#>  █ #8C4799
+#>  █ #0032A0
+#>  [sexuality]
 ```
