@@ -20,11 +20,7 @@ palette_lgbtq <- function(name) {
     stop(sprintf("Palette '%s' not recognized as lgbthue palette.", name), call. = FALSE)
   }
 
-  structure(
-    .pride[[name]][["colors"]],
-    class = "lgbtq_palette",
-    name = name
-  )
+  .pride[[name]]
 }
 
 #' @export

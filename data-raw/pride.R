@@ -222,9 +222,13 @@ tags <- purrr::map(.pride, \(palette) {
 
 .pride <- .pride |>
   purrr::imap(\(palette, name) {
-    palette |>
-      purrr::list_assign(name = name) |>
-      structure(class = "lgbtq_palette_data")
+    structure(
+      palette[["colors"]],
+      name = name,
+      aliases = palette[["aliases"]],
+      tags = palette[["tags"]],
+      class = "lgbtq_palette"
+    )
   }) |>
   structure(class = "lgbtq_palette_list")
 
