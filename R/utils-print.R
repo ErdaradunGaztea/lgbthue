@@ -2,7 +2,6 @@
 print.lgbtq_palette <- function(x, ...) {
   cat(sprintf("%s [%i]\n", attr(x, "name", exact = TRUE), length(x)))
 
-  # TODO: lapply() may not be necessary here
   args <- lapply(x, function(color) {
     sprintf(" %s %s", cli::make_ansi_style(color)("\u2588"), color)
   })
