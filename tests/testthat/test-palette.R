@@ -47,3 +47,24 @@ test_that("`name` must be one of existing palette names", {
     error = TRUE
   )
 })
+
+test_that("aliases are supported", {
+  expect_identical(
+    palette_lgbtq("wlw"),
+    palette_lgbtq("lesbian")
+  )
+})
+
+test_that("`name` is case-insensitive", {
+  expect_identical(
+    palette_lgbtq("BEAR"),
+    palette_lgbtq("bear")
+  )
+})
+
+test_that("`name` allows using spaces instead of underscores", {
+  expect_identical(
+    palette_lgbtq("gay 7"),
+    palette_lgbtq("gay_7")
+  )
+})
