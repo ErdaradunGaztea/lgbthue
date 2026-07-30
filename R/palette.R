@@ -15,10 +15,10 @@
 palette_lgbtq <- function(name) {
   checkmate::assert_string(name)
 
-  if (!name %in% names(.pride)) {
+  if (!name %in% names(.pride_alias_dict)) {
     # TODO: Add mention of `show_pride()`
     stop(sprintf("Palette '%s' not recognized as lgbthue palette.", name), call. = FALSE)
   }
 
-  .pride[[name]]
+  .pride[[.pride_alias_dict[[name]]]]
 }
