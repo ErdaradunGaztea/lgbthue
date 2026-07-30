@@ -231,6 +231,7 @@ tags <- purrr::map(.pride, \(palette) {
     structure(
       palette[["colors"]],
       name = name,
+      # TODO: Are aliases and tags even necessary at this point?
       aliases = palette[["aliases"]],
       tags = palette[["tags"]],
       class = "lgbtq_palette"
