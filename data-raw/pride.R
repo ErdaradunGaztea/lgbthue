@@ -204,6 +204,12 @@
     purrr::list_c()
 )
 
+# Ensure that all names and aliases are lowercase and contain underscores only
+checkmate::assert_character(
+  names(.pride_alias_dict),
+  pattern = "^[a-z0-9_]+$"
+)
+
 tags <- purrr::map(.pride, \(palette) {
   palette[["tags"]]
 })
