@@ -25,6 +25,22 @@
 ---
 
     Code
+      palette_lgbtq(name = c("string", "second"))
+    Condition
+      Error in `palette_lgbtq()`:
+      ! Assertion on 'name' failed: Must have length 1.
+
+---
+
+    Code
+      palette_lgbtq(name = character(0))
+    Condition
+      Error in `palette_lgbtq()`:
+      ! Assertion on 'name' failed: Must have length 1.
+
+---
+
+    Code
       palette_lgbtq(name = NA_character_)
     Condition
       Error in `palette_lgbtq()`:
