@@ -6,6 +6,17 @@
 \usage{
 show_pride(..., tags = NULL, sizes = NULL)
 }
+\arguments{
+\item{...}{\cr
+These dots are for future extensions and must be empty.}
+
+\item{tags}{\code{character()} \cr
+Tags to filter by; currently available:
+\code{"rainbow"}, \code{"sexuality"}, \code{"gender"}, \code{"subculture"}, \code{"a-spec"}, \code{"galactian"}.}
+
+\item{sizes}{\code{integer()} \cr
+Palette sizes to require.}
+}
 \value{
 An \code{lgbtq_palette_list} with matching palettes.
 }
@@ -13,6 +24,10 @@ An \code{lgbtq_palette_list} with matching palettes.
 Shows the names of available LGBTQ palettes and their metadata.
 }
 \examples{
+# By default, all palettes are shown
 show_pride()
+
+# To find rainbow palettes of sizes 6 and 8:
+show_pride(tags = "rainbow", sizes = c(6, 8))
 
 }
