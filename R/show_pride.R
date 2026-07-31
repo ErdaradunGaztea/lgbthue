@@ -9,7 +9,10 @@
 #'
 #' @export
 show_pride <- function(..., tags = NULL, sizes = NULL) {
-  # TODO: Add checkmate
+  ellipsis::check_dots_empty()
+  checkmate::assert_character(tags, any.missing = FALSE, null.ok = TRUE)
+  checkmate::assert_integerish(sizes, lower = 1L, any.missing = FALSE, null.ok = TRUE)
+
   valid <- names(.pride)
 
   if (!is.null(tags)) {
