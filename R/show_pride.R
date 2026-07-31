@@ -8,7 +8,7 @@
 #' show_pride()
 #'
 #' @export
-show_pride <- function(tags = NULL, sizes = NULL) {
+show_pride <- function(..., tags = NULL, sizes = NULL) {
   # TODO: Add checkmate
   valid <- names(.pride)
 

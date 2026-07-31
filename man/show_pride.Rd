@@ -4,7 +4,7 @@
 \alias{show_pride}
 \title{List available palettes}
 \usage{
-show_pride(tags = NULL, sizes = NULL)
+show_pride(..., tags = NULL, sizes = NULL)
 }
 \value{
 An \code{lgbtq_palette_list} with matching palettes.
