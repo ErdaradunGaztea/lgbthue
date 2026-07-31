@@ -31,6 +31,8 @@ needs_flag <- function(param, expr, ..., na_ok = FALSE, null_ok = FALSE) {
   .expect_fails(expr, param, 156L)
   .expect_fails(expr, param, "TRUE")
   .expect_fails(expr, param, list("TRUE"))
+  .expect_fails(expr, param, c(TRUE, FALSE))
+  .expect_fails(expr, param, logical())
 
   if (!na_ok) {
     .expect_fails(expr, param, NA)
@@ -54,6 +56,8 @@ needs_int <- function(param, expr, ..., na_ok = FALSE, lower = -Inf, upper = Inf
   .expect_fails(expr, param, "156")
   .expect_fails(expr, param, list(156L))
   .expect_fails(expr, param, 15.6)
+  .expect_fails(expr, param, c(156L, 157L))
+  .expect_fails(expr, param, integer())
 
   if (!na_ok) {
     .expect_fails(expr, param, NA_integer_)
@@ -86,6 +90,8 @@ needs_string <- function(param, expr, ..., na_ok = FALSE, n_chars = NULL, min_ch
   .expect_fails(expr, param, TRUE)
   .expect_fails(expr, param, 156L)
   .expect_fails(expr, param, list("string"))
+  .expect_fails(expr, param, c("string", "second"))
+  .expect_fails(expr, param, character())
 
   if (!na_ok) {
     .expect_fails(expr, param, NA_character_)
@@ -135,7 +141,7 @@ needs_string <- function(param, expr, ..., na_ok = FALSE, n_chars = NULL, min_ch
 }
 
 # Atomic tests ----
-needs_character <- function(param, expr, ..., na_ok = FALSE, null_ok = FALSE, empty_ok = FALSE) {
+needs_character <- function(param, expr, ..., any_missing = FALSE, min_len = NULL, max_len = NULL, null_ok = FALSE) {
   ellipsis::check_dots_empty()
 
   expr <- rlang::enexpr(expr)
@@ -148,15 +154,26 @@ needs_character <- function(param, expr, ..., na_ok = FALSE, null_ok = FALSE, em
   .expect_fails(expr, param, 156L)
   .expect_fails(expr, param, list("string"))
 
-  if (!na_ok) {
-    .expect_fails(expr, param, NA_character_)
+  if (!any_missing) {
+    .expect_fails(expr, param, c("string", NA_character_))
   }
 
   if (!null_ok) {
     .expect_fails(expr, param, NULL)
   }
 
-  if (!empty_ok) {
+  if (!is.null(min_len) && min_len > 0L) {
     .expect_fails(expr, param, character())
+    .expect_fails(
+      expr, param,
+      sprintf("string%i", seq_len(min_len - 1L))
+    )
+  }
+
+  if (!is.null(max_len)) {
+    .expect_fails(
+      expr, param,
+      sprintf("string%i", seq_len(max_len + 1L))
+    )
   }
 }
