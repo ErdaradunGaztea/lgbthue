@@ -8,6 +8,24 @@ Shows the names of available LGBTQ palettes and their metadata.
 show_pride(..., tags = NULL, sizes = NULL)
 ```
 
+## Arguments
+
+- ...:
+
+    
+  These dots are for future extensions and must be empty.
+
+- tags:
+
+  [`character()`](https://rdrr.io/r/base/character.html)  
+  Tags to filter by; currently available: `"rainbow"`, `"sexuality"`,
+  `"gender"`, `"subculture"`, `"a-spec"`, `"galactian"`.
+
+- sizes:
+
+  [`integer()`](https://rdrr.io/r/base/integer.html)  
+  Palette sizes to require.
+
 ## Value
 
 An `lgbtq_palette_list` with matching palettes.
@@ -15,6 +33,7 @@ An `lgbtq_palette_list` with matching palettes.
 ## Examples
 
 ``` r
+# By default, all palettes are shown
 show_pride()
 #> rainbow [6]
 #>  █ #E40303
@@ -357,5 +376,28 @@ show_pride()
 #>  █ #F9E134
 #>  █ #36E32D
 #>  █ #2499F5
+#> 
+
+# To find rainbow palettes of sizes 6 and 8:
+show_pride(tags = "rainbow", sizes = c(6, 8))
+#> rainbow [6]
+#>  █ #E40303
+#>  █ #FF8C00
+#>  █ #FFED00
+#>  █ #008026
+#>  █ #24408E
+#>  █ #732982
+#>  [rainbow]
+#> 
+#> philadelphia [8]
+#>  █ #000000
+#>  █ #784F17
+#>  █ #D12229
+#>  █ #F68A1E
+#>  █ #FDE01A
+#>  █ #007940
+#>  █ #24408E
+#>  █ #732982
+#>  [rainbow]
 #> 
 ```

@@ -24,3 +24,9 @@ pak::pak("ErdaradunGaztea/lgbthue")
 - [`show_pride()`](https://erdaradungaztea.github.io/lgbthue/reference/show_pride.md)
   : List available palettes
 
+# Articles
+
+### All vignettes
+
+- [Palette
+  gallery](https://erdaradungaztea.github.io/lgbthue/articles/gallery.md):
