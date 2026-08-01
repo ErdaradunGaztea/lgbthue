@@ -2,7 +2,7 @@
 plot.lgbtq_palette <- function(x, ...,
                                background = getOption("gglgbtq_bg", default = "white"),
                                font_size = getOption("gglgbtq_font_size", default = 2.5)) {
-  old <- graphics::par()[c("mar", "bg")]
+  old <- graphics::par(no.readonly = TRUE)
   on.exit(graphics::par(old))
 
   graphics::par(
