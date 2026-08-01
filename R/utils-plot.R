@@ -1,7 +1,7 @@
 #' @export
 plot.lgbtq_palette <- function(x, ...,
-                               background = getOption("gglgbtq_bg", default = "white"),
-                               font_size = getOption("gglgbtq_font_size", default = 2.5)) {
+                               background = getOption("lgbthue_bg", default = "white"),
+                               font_size = getOption("lgbthue_font_size", default = 2.5)) {
   old <- graphics::par(no.readonly = TRUE)
   on.exit(graphics::par(old))
 

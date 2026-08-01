@@ -7,10 +7,13 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
+  # fig.height = 1.6,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+options(gglgbtq_font_size = 1.7)
+set.seed(123L)
 ```
 
 # lgbthue
@@ -28,7 +31,52 @@ The goal of lgbthue is to provide palette data for pride flags for use by [gglgb
 
 You can install the development version of lgbthue from [GitHub](https://github.com/) with:
 
-``` r
+```{r install, eval = FALSE}
 # install.packages("pak")
 pak::pak("ErdaradunGaztea/lgbthue")
+```
+
+## User guide
+
+To list all available palettes, call `show_pride()`. The output would be very long, however, so I'm not including the result. Instead, know it is possible to filter by tags and palette sizes:
+
+```{r pride_filtered}
+library(lgbthue)
+show_pride(tags = "rainbow", sizes = c(6, 8))
+```
+
+Accessing one of these is best done by `palette_lgbtq()`:
+
+```{r palette_lgbtq}
+palette_lgbtq("lesbian")
+```
+
+Such palettes can be used anywhere a palette is needed, plots in particular. For example:
+
+```{r plot}
+group <- rep(1:6, each = 10)
+x <- group + .5 * rnorm(60)
+y <- runif(60, 1, 1.5) * sqrt(group)
+plot(x, y, pch = 19, col = palette_lgbtq("rainbow")[group], cex = 2)
+```
+
+If you wish to use these palettes with ggplot2, [gglgbtq](https://github.com/turtletopia/gglgbtq) adapts these palettes to that particular use case.
+
+## Gallery
+
+Only a few most common palettes are included below. For the complete list, see [palette gallery vignette](https://ErdaradunGaztea.github.io/lgbthue/articles/gallery.html).
+
+```{r palettes, fig.height=2}
+plot(palette_lgbtq("rainbow"))
+plot(palette_lgbtq("philadelphia"))
+plot(palette_lgbtq("progress"))
+plot(palette_lgbtq("lesbian"))
+# In its original meaning of "gay men"
+plot(palette_lgbtq("gay"))
+plot(palette_lgbtq("bisexual"))
+# Background added to avoid the "disappearance" of the white stripe
+plot(palette_lgbtq("transgender"), background = "gray92")
+plot(palette_lgbtq("asexual"))
+plot(palette_lgbtq("nonbinary"))
+plot(palette_lgbtq("intersex"))
 ```
