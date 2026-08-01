@@ -66,7 +66,7 @@ If you wish to use these palettes with ggplot2, [gglgbtq](https://github.com/tur
 
 Only a few most common palettes are included below. For the complete list, see [palette gallery vignette](https://ErdaradunGaztea.github.io/lgbthue/articles/gallery.html).
 
-```{r palettes, fig.height=2}
+```{r palettes, fig.height=1.6}
 plot(palette_lgbtq("rainbow"))
 plot(palette_lgbtq("philadelphia"))
 plot(palette_lgbtq("progress"))

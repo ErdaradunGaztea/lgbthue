@@ -3,6 +3,7 @@ plot.lgbtq_palette <- function(x, ...,
                                background = getOption("lgbthue_bg", default = "white"),
                                font_size = getOption("lgbthue_font_size", default = 2.5)) {
   old <- graphics::par(no.readonly = TRUE)
+  old <- old[!names(old) %in% "pin"]
   on.exit(graphics::par(old))
 
   graphics::par(
