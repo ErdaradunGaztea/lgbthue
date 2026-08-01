@@ -7,12 +7,11 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  # fig.height = 1.6,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
-options(gglgbtq_font_size = 1.7)
+options(lgbthue_font_size = 1.7)
 set.seed(123L)
 ```
 

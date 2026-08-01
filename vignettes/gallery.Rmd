@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
   fig.width = 5
 )
 library(lgbthue)
-options(gglgbtq_font_size = 1.7)
+options(lgbthue_font_size = 1.7)
 ```
 
 ## The most common flags
