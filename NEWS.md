@@ -1,3 +1,3 @@
 # lgbthue (development version)
 
-* Initial CRAN submission.
+* Initial package version sourced from {gglgbtq}.
