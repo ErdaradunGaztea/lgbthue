@@ -1,6 +1,7 @@
 # List available palettes
 
-Shows the names of available LGBTQ palettes and their metadata.
+Shows the available LGBTQ palettes, possibly filtered by tags and/or
+size.
 
 ## Usage
 
