@@ -285,7 +285,20 @@ tags <- purrr::map(.pride, \(palette) {
   }) |>
   structure(class = "lgbtq_palette_list")
 
+# History ----
+# TODO: Remember to update when running again
+next_version <- "1.0.0"
+new_palettes <- setdiff(names(.pride), lgbthue:::.pride_history)
+.pride_history <- c(
+  lgbthue:::.pride_history,
+  purrr::set_names(
+    rep(next_version, times = length(new_palettes)),
+    nm = new_palettes
+  )
+)
+
+# Saving ----
 usethis::use_data(
-  .pride, .pride_alias_dict, .pride_tag_dict, .pride_size_dict,
+  .pride, .pride_alias_dict, .pride_tag_dict, .pride_size_dict, .pride_history,
   internal = TRUE, overwrite = TRUE
 )
