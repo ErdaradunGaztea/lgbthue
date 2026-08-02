@@ -1,6 +1,6 @@
 #' List available palettes
 #'
-#' @description Shows the names of available LGBTQ palettes and their metadata.
+#' @description Shows the available LGBTQ palettes, possibly filtered by tags and/or size.
 #'
 #' @param ... \cr
 #'  These dots are for future extensions and must be empty.

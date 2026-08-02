@@ -21,7 +21,7 @@ Palette sizes to require.}
 An \code{lgbtq_palette_list} with matching palettes.
 }
 \description{
-Shows the names of available LGBTQ palettes and their metadata.
+Shows the available LGBTQ palettes, possibly filtered by tags and/or size.
 }
 \examples{
 # By default, all palettes are shown
