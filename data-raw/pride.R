@@ -288,7 +288,7 @@ tags <- purrr::map(.pride, \(palette) {
 # History ----
 # TODO: Remember to update when running again
 next_version <- "1.0.0"
-new_palettes <- setdiff(names(.pride), lgbthue:::.pride_history)
+new_palettes <- setdiff(names(.pride), names(lgbthue:::.pride_history))
 .pride_history <- c(
   lgbthue:::.pride_history,
   purrr::set_names(
