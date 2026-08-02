@@ -1,5 +1,6 @@
+# Palette defs ----
 .pride <- list(
-  # Base flags
+  ## Base flags ----
   rainbow = list(
     colors = c("#E40303", "#FF8C00", "#FFED00", "#008026", "#24408E", "#732982"),
     aliases = c("pride"),
@@ -47,7 +48,7 @@
     tags = c("gender"),
     flag = "lgbtq_palette_hflag"
   ),
-  # Rainbow variants
+  ## Rainbow variants ----
   philadelphia = list(
     colors = c("#000000", "#784F17", "#D12229", "#F68A1E", "#FDE01A", "#007940", "#24408E", "#732982"),
     tags = c("rainbow"),
@@ -59,7 +60,7 @@
     tags = c("rainbow"),
     flag = "lgbtq_palette_chevron5"
   ),
-  # A-spectrum
+  ## A-spectrum ----
   aromantic = list(
     colors = c("#3DA542", "#A7D379", "#FFFFFF", "#A4A4A4", "#000000"),
     tags = c("sexuality", "a-spec"),
@@ -105,7 +106,7 @@
     tags = c("sexuality", "a-spec"),
     flag = "lgbtq_palette_hflag"
   ),
-  # Other sexualities
+  ## Other sexualities ----
   pansexual = list(
     colors = c("#FF1B8D", "#FFDA00", "#1BB3FF"),
     aliases = c("pan"),
@@ -149,7 +150,7 @@
     tags = c("sexuality"),
     flag = "lgbtq_palette_hflag"
   ),
-  # Fem-masc genders
+  ## Fem-masc genders ----
   demiboy = list(
     colors = c("#7F7F7F", "#C4C4C4", "#9DD7EA", "#FFFFFF"),
     tags = c("gender"),
@@ -160,7 +161,7 @@
     tags = c("gender"),
     flag = "lgbtq_palette_hflag_symmetrical"
   ),
-  # Galactian alignment system
+  ## Galactian alignment system ----
   # TODO: Handle symbols on galactian flags
   helian = list(
     colors = c("#FF7367", "#BC3028", "#FFF7B8", "#000000", "#B5B5B5"),
@@ -182,7 +183,7 @@
     tags = c("gender", "galactian"),
     flag = "lgbtq_palette_hflag"
   ),
-  # Other genders
+  ## Other genders ----
   genderfluid = list(
     colors = c("#FF76A4", "#FFFFFF", "#C011D7", "#000000", "#2F3CBE"),
     tags = c("gender"),
@@ -203,7 +204,7 @@
     tags = c("gender"),
     flag = "lgbtq_palette_hflag"
   ),
-  # Subcultures
+  ## Subcultures ----
   amatopunk = list(
     colors = c("#531768", "#B74D71", "#DB966D", "#FFE7AA", "#4E8C69"),
     tags = c("subculture"),
@@ -229,7 +230,7 @@
     tags = c("subculture"),
     flag = "lgbtq_palette_hflag"
   ),
-  # Uncategorized
+  ## Uncategorized ----
   queerhet = list(
     colors = c("#4E8492", "#6CCB99", "#727D6E", "#DAC686", "#B86962"),
     flag = "lgbtq_palette_hflag"
@@ -239,6 +240,7 @@
   )
 )
 
+# Transformations ----
 .pride_alias_dict <- c(
   purrr::set_names(names(.pride)),
   purrr::imap(.pride, \(palette, name) {
