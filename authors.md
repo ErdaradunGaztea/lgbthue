@@ -9,12 +9,12 @@
 
 Bakala L (2026). *lgbthue: What the Package Does (One Line, Title
 Case)*. R package version 0.0.0.9000,
-<https://erdaradungaztea.github.io/lgbthue/>.
+<https://turtletopia.github.io/lgbthue/>.
 
     @Manual{,
       title = {lgbthue: What the Package Does (One Line, Title Case)},
       author = {Laura Bakala},
       year = {2026},
       note = {R package version 0.0.0.9000},
-      url = {https://erdaradungaztea.github.io/lgbthue/},
+      url = {https://turtletopia.github.io/lgbthue/},
     }

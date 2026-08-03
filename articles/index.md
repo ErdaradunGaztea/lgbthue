@@ -3,4 +3,4 @@
 ### All vignettes
 
 - [Palette
-  gallery](https://erdaradungaztea.github.io/lgbthue/articles/gallery.md):
+  gallery](https://turtletopia.github.io/lgbthue/articles/gallery.md):
