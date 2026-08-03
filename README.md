@@ -25,7 +25,7 @@ You can install the development version of lgbthue from
 
 ``` r
 # install.packages("pak")
-pak::pak("ErdaradunGaztea/lgbthue")
+pak::pak("turtletopia/lgbthue")
 ```
 
 ## User guide
@@ -91,7 +91,7 @@ to that particular use case.
 
 Only a few most common palettes are included below. For the complete
 list, see [palette gallery
-vignette](https://ErdaradunGaztea.github.io/lgbthue/articles/gallery.html).
+vignette](https://turtletopia.github.io/lgbthue/articles/gallery.html).
 
 ``` r
 plot(palette_lgbtq("rainbow"))
