@@ -1,4 +1,14 @@
 #' @export
+print.lgbtq_sequence <- function(x, ...) {
+  cat(sprintf("%s [seq %i]\n", attr(x, "name", exact = TRUE), length(x)))
+
+  args <- lapply(x, function(color) {
+    sprintf(" %s %s", cli::make_ansi_style(color)("\u2588"), color)
+  })
+  do.call(cat, c(args, sep = "\n"))
+}
+
+#' @export
 print.lgbtq_palette <- function(x, ...) {
   cat(sprintf("%s [%i]\n", attr(x, "name", exact = TRUE), length(x)))
 

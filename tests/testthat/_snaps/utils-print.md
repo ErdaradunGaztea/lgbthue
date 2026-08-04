@@ -1,3 +1,15 @@
+# print.lgbtq_sequence() output remains unchanged
+
+    Code
+      print(seq(.pride[["lesbian"]]))
+    Output
+      lesbian [seq 5]
+       █ #D62900
+       █ #FF9B55
+       █ #FFFFFF
+       █ #D461A6
+       █ #A50062
+
 # print.lgbtq_palette() output remains unchanged
 
     Code
