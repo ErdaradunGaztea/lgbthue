@@ -11,21 +11,38 @@
 #'
 #' @export
 seq.lgbtq_palette <- function(x) {
-  as.character(x)
+  new_lgbtq_sequence(
+    as.character(x),
+    attr(x, "name", exact = TRUE)
+  )
 }
 
 #' @rdname seq.lgbtq_palette
 #' @export
 seq.lgbtq_palette_hflag_symmetrical <- function(x) {
-  x <- as.character(x)
-  c(x, rev(x)[-1])
+  x_chr <- as.character(x)
+
+  new_lgbtq_sequence(
+    c(x_chr, rev(x_chr)[-1]),
+    attr(x, "name", exact = TRUE)
+  )
 }
 
 #' @rdname seq.lgbtq_palette
 #' @export
 seq.lgbtq_palette_hflag_outer <- function(x) {
-  x <- as.character(x)
-  c(x[1], x, x[length(x)])
+  x_chr <- as.character(x)
+
+  new_lgbtq_sequence(
+    c(x_chr[1], x_chr, x_chr[length(x_chr)]),
+    attr(x, "name", exact = TRUE)
+  )
 }
 
-# TODO: Think about an `lgbtq_sequence` class
+new_lgbtq_sequence <- function(colors, name) {
+  structure(
+    colors,
+    name = name,
+    class = "lgbtq_sequence"
+  )
+}
