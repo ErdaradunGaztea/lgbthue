@@ -6,15 +6,18 @@
 \alias{seq.lgbtq_palette_hflag_outer}
 \title{Generate colour sequence from a palette}
 \usage{
-\method{seq}{lgbtq_palette}(x)
+\method{seq}{lgbtq_palette}(x, ...)
 
-\method{seq}{lgbtq_palette_hflag_symmetrical}(x)
+\method{seq}{lgbtq_palette_hflag_symmetrical}(x, ...)
 
-\method{seq}{lgbtq_palette_hflag_outer}(x)
+\method{seq}{lgbtq_palette_hflag_outer}(x, ...)
 }
 \arguments{
 \item{x}{\code{lgbtq_palette()}\cr
 Palette to generate sequence from.}
+
+\item{...}{\cr
+These dots are for future extensions and must be empty.}
 }
 \value{
 A character vector of colours in flag order.

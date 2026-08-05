@@ -6,11 +6,14 @@
 #'
 #' @param x `lgbtq_palette()`\cr
 #'  Palette to generate sequence from.
+#' @param ... \cr
+#'  These dots are for future extensions and must be empty.
 #'
 #' @return A character vector of colours in flag order.
 #'
 #' @export
-seq.lgbtq_palette <- function(x) {
+seq.lgbtq_palette <- function(x, ...) {
+  ellipsis::check_dots_empty()
   new_lgbtq_sequence(
     as.character(x),
     attr(x, "name", exact = TRUE)
@@ -19,7 +22,8 @@ seq.lgbtq_palette <- function(x) {
 
 #' @rdname seq.lgbtq_palette
 #' @export
-seq.lgbtq_palette_hflag_symmetrical <- function(x) {
+seq.lgbtq_palette_hflag_symmetrical <- function(x, ...) {
+  ellipsis::check_dots_empty()
   x_chr <- as.character(x)
 
   new_lgbtq_sequence(
@@ -30,7 +34,8 @@ seq.lgbtq_palette_hflag_symmetrical <- function(x) {
 
 #' @rdname seq.lgbtq_palette
 #' @export
-seq.lgbtq_palette_hflag_outer <- function(x) {
+seq.lgbtq_palette_hflag_outer <- function(x, ...) {
+  ellipsis::check_dots_empty()
   x_chr <- as.character(x)
 
   new_lgbtq_sequence(
