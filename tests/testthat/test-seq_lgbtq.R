@@ -1,3 +1,4 @@
+# Shape ----
 test_that("returns a character vector", {
   for (name in names(.pride)) {
     out <- seq(palette_lgbtq(name))
@@ -16,6 +17,7 @@ test_that("has `name` attribute", {
   }
 })
 
+# Value ----
 test_that("most palettes return themselves", {
   lgbtq_palette <- palette_lgbtq("rainbow")
   expect_identical(
