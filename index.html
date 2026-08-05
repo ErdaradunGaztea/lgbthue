@@ -109,41 +109,50 @@
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, pch <span class="op">=</span> <span class="fl">19</span>, col <span class="op">=</span> <span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"rainbow"</span><span class="op">)</span><span class="op">[</span><span class="va">group</span><span class="op">]</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-plot-1.png" alt="" width="100%"></p>
 <p>If you wish to use these palettes with ggplot2, <a href="https://github.com/turtletopia/gglgbtq" class="external-link">gglgbtq</a> adapts these palettes to that particular use case.</p>
+<p>Moreover, as a palette draws from the colors of a flag, a <code><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq()</a></code> method is provided that transforms a palette into a sequence so that e.g. a vertical bar with correct flag colors can be shown:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"trans"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; transgender [seq 5]</span></span>
+<span><span class="co">#&gt;  █ #55CDFC</span></span>
+<span><span class="co">#&gt;  █ #F7A8B8</span></span>
+<span><span class="co">#&gt;  █ #FFFFFF</span></span>
+<span><span class="co">#&gt;  █ #F7A8B8</span></span>
+<span><span class="co">#&gt;  █ #55CDFC</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="gallery">Gallery<a class="anchor" aria-label="anchor" href="#gallery"></a>
 </h2>
 <p>Only a few most common palettes are included below. For the complete list, see <a href="https://turtletopia.github.io/lgbthue/articles/gallery.html">palette gallery vignette</a>.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"rainbow"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-1.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"philadelphia"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-2.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"progress"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-3.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"lesbian"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-4.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># In its original meaning of "gay men"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"gay"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-5.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"bisexual"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-6.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Background added to avoid the "disappearance" of the white stripe</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"transgender"</span><span class="op">)</span>, background <span class="op">=</span> <span class="st">"gray92"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-7.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"asexual"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-8.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"nonbinary"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-9.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/palette_lgbtq.html">palette_lgbtq</a></span><span class="op">(</span><span class="st">"intersex"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-palettes-10.png" alt="" width="100%"></p>
 </div>

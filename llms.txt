@@ -79,6 +79,22 @@ If you wish to use these palettes with ggplot2,
 [gglgbtq](https://github.com/turtletopia/gglgbtq) adapts these palettes
 to that particular use case.
 
+Moreover, as a palette draws from the colors of a flag, a
+[`seq()`](https://rdrr.io/r/base/seq.html) method is provided that
+transforms a palette into a sequence so that e.g. a vertical bar with
+correct flag colors can be shown:
+
+``` r
+
+seq(palette_lgbtq("trans"))
+#> transgender [seq 5]
+#>  █ #55CDFC
+#>  █ #F7A8B8
+#>  █ #FFFFFF
+#>  █ #F7A8B8
+#>  █ #55CDFC
+```
+
 ## Gallery
 
 Only a few most common palettes are included below. For the complete
