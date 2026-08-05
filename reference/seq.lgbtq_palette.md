@@ -7,13 +7,13 @@ order of those colours on the corresponding flag.
 
 ``` r
 # S3 method for class 'lgbtq_palette'
-seq(x)
+seq(x, ...)
 
 # S3 method for class 'lgbtq_palette_hflag_symmetrical'
-seq(x)
+seq(x, ...)
 
 # S3 method for class 'lgbtq_palette_hflag_outer'
-seq(x)
+seq(x, ...)
 ```
 
 ## Arguments
@@ -22,6 +22,11 @@ seq(x)
 
   `lgbtq_palette()`  
   Palette to generate sequence from.
+
+- ...:
+
+    
+  These dots are for future extensions and must be empty.
 
 ## Value
 
