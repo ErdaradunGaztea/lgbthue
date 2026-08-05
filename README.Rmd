@@ -61,6 +61,12 @@ plot(x, y, pch = 19, col = palette_lgbtq("rainbow")[group], cex = 2)
 
 If you wish to use these palettes with ggplot2, [gglgbtq](https://github.com/turtletopia/gglgbtq) adapts these palettes to that particular use case.
 
+Moreover, as a palette draws from the colors of a flag, a `seq()` method is provided that transforms a palette into a sequence so that e.g. a vertical bar with correct flag colors can be shown:
+
+```{r seq}
+seq(palette_lgbtq("trans"))
+```
+
 ## Gallery
 
 Only a few most common palettes are included below. For the complete list, see [palette gallery vignette](https://turtletopia.github.io/lgbthue/articles/gallery.html).
