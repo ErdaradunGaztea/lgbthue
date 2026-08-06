@@ -39,7 +39,7 @@ text_lgbtq.character <- function(
   ellipsis::check_dots_empty()
 
   .style <- match.arg(.style)
-  checkmate::assert_character(text)
+  # checkmate::assert_character(text)
   # TODO: Allow passing lgbtq_palette and lgbtq_sequence
   checkmate::assert_string(palette)
 
@@ -51,16 +51,17 @@ text_lgbtq.character <- function(
 
   coords <- make_coords(text, palette, .style)
 
-  out <- Reduce(\(out, i) {
-    color <- palette[[coords[[1]][[i, "palette"]]]]
-    start <- vapply(coords, function(coord) {
-      coord[[i, "start"]]
-    }, integer(1))
-    end <- vapply(coords, function(coord) {
-      coord[[i, "end"]]
-    }, integer(1))
-    paste0(out, cli::make_ansi_style(color)(cli::ansi_substr(text, start, end)))
-  }, seq_len(nrow(coords[[1]])), init = "")
+  out <- vapply(seq_along(coords), function(j) {
+    coords <- coords[[j]]
+    text <- text[[j]]
+
+    Reduce(function(out, i) {
+      color <- palette[[coords[[i, "palette"]]]]
+      start <- coords[[i, "start"]]
+      end <- coords[[i, "end"]]
+      paste0(out, cli::make_ansi_style(color)(cli::ansi_substr(text, start, end)))
+    }, seq_len(nrow(coords)), init = "")
+  }, character(1))
 
   cli::ansi_string(out)
 }
@@ -79,12 +80,13 @@ text_lgbtq.cli_ansi_string <- function(
 make_coords <- function(text, palette, .style) {
   coords_func <- switch(
     .style,
-    "stripe" = make_stripe_coords_1
+    "stripe" = make_stripe_coords,
+    "cycle_char" = make_cycle_char_coords
   )
   lapply(text, function(string) { coords_func(string, palette) })
 }
 
-make_stripe_coords_1 <- function(string, palette) {
+make_stripe_coords <- function(string, palette) {
   n <- length(palette)
   ends <- round((cli::ansi_nchar(string) / n) * seq_len(n))
   starts <- c(1L, ends[-length(ends)] + 1L)
@@ -93,5 +95,16 @@ make_stripe_coords_1 <- function(string, palette) {
     start = as.integer(starts),
     end = as.integer(ends),
     palette = seq_len(n)
+  )
+}
+
+make_cycle_char_coords <- function(string, palette) {
+  n <- length(palette)
+  nchar <- cli::ansi_nchar(string)
+
+  data.frame(
+    start = seq_len(nchar),
+    end = seq_len(nchar),
+    palette = rep_len(seq_len(n), nchar)
   )
 }
