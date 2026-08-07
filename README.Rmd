@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%",
-  asciicast_knitr_output = "html"
+  asciicast_knitr_output = "svg"
 )
 asciicast::init_knitr_engine(
   echo = TRUE,
@@ -18,8 +18,7 @@ asciicast::init_knitr_engine(
   startup = quote({
     library(lgbthue)
     options(
-      cli.num_colors = cli::truecolor,
-      asciicast_theme = list(background = c(255, 255, 255))
+      cli.num_colors = cli::truecolor
     )
   })
 )

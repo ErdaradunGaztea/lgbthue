@@ -38,33 +38,7 @@ possible to filter by tags and palette sizes:
 show_pride(tags = "rainbow", sizes = c(6, 8))
 ```
 
-<div class="asciicast"
-style="color: #B9C0CB;font-family: 'Fira Code',Monaco,Consolas,Menlo,'Bitstream Vera Sans Mono','Powerline Symbols',monospace;line-height: 1.300000">
-
-<pre>
-#> rainbow [6]                                                                     
-#>  <span style="color:#e40303;">█</span> #E40303                                                                      
-#>  <span style="color:#ff8c00;">█</span> #FF8C00                                                                      
-#>  <span style="color:#ffed00;">█</span> #FFED00                                                                      
-#>  <span style="color:#008026;">█</span> #008026                                                                      
-#>  <span style="color:#24408e;">█</span> #24408E                                                                      
-#>  <span style="color:#732982;">█</span> #732982                                                                      
-#>  [<span style="color: #71BEF2;">rainbow</span>]                                                                      
-#>                                                                                 
-#> philadelphia [8]                                                                
-#>  <span style="color:#000000;">█</span> #000000                                                                      
-#>  <span style="color:#784f17;">█</span> #784F17                                                                      
-#>  <span style="color:#d12229;">█</span> #D12229                                                                      
-#>  <span style="color:#f68a1e;">█</span> #F68A1E                                                                      
-#>  <span style="color:#fde01a;">█</span> #FDE01A                                                                      
-#>  <span style="color:#007940;">█</span> #007940                                                                      
-#>  <span style="color:#24408e;">█</span> #24408E                                                                      
-#>  <span style="color:#732982;">█</span> #732982                                                                      
-#>  [<span style="color: #71BEF2;">rainbow</span>]                                                                      
-#>                                                                                 
-</pre>
-
-</div>
+<img src="man/figures/README-/pride_filtered.svg" alt="" width="100%" />
 
 Accessing one of these is best done by `palette_lgbtq()`:
 
@@ -72,20 +46,7 @@ Accessing one of these is best done by `palette_lgbtq()`:
 palette_lgbtq("lesbian")
 ```
 
-<div class="asciicast"
-style="color: #B9C0CB;font-family: 'Fira Code',Monaco,Consolas,Menlo,'Bitstream Vera Sans Mono','Powerline Symbols',monospace;line-height: 1.300000">
-
-<pre>
-#> lesbian [5]                                                                     
-#>  <span style="color:#d62900;">█</span> #D62900                                                                      
-#>  <span style="color:#ff9b55;">█</span> #FF9B55                                                                      
-#>  <span style="color:#ffffff;">█</span> #FFFFFF                                                                      
-#>  <span style="color:#d461a6;">█</span> #D461A6                                                                      
-#>  <span style="color:#a50062;">█</span> #A50062                                                                      
-#>  [<span style="color: #71BEF2;">sexuality</span>]                                                                    
-</pre>
-
-</div>
+<img src="man/figures/README-/palette_lgbtq.svg" alt="" width="100%" />
 
 Such palettes can be used anywhere a palette is needed, plots in
 particular. For example:
@@ -111,19 +72,7 @@ vertical bar with correct flag colors can be shown:
 seq(palette_lgbtq("trans"))
 ```
 
-<div class="asciicast"
-style="color: #B9C0CB;font-family: 'Fira Code',Monaco,Consolas,Menlo,'Bitstream Vera Sans Mono','Powerline Symbols',monospace;line-height: 1.300000">
-
-<pre>
-#> transgender [seq 5]                                                             
-#>  <span style="color:#55cdfc;">█</span> #55CDFC                                                                      
-#>  <span style="color:#f7a8b8;">█</span> #F7A8B8                                                                      
-#>  <span style="color:#ffffff;">█</span> #FFFFFF                                                                      
-#>  <span style="color:#f7a8b8;">█</span> #F7A8B8                                                                      
-#>  <span style="color:#55cdfc;">█</span> #55CDFC                                                                      
-</pre>
-
-</div>
+<img src="man/figures/README-/seq.svg" alt="" width="100%" />
 
 ## Gallery
 
