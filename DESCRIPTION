@@ -14,6 +14,7 @@ Imports:
     cli,
     ellipsis
 Suggests: 
+    asciicast,
     knitr,
     mockery,
     purrr,

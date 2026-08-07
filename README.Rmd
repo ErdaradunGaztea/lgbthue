@@ -9,8 +9,21 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "100%",
+  asciicast_knitr_output = "html"
 )
+asciicast::init_knitr_engine(
+  echo = TRUE,
+  echo_input = FALSE,
+  startup = quote({
+    library(lgbthue)
+    options(
+      cli.num_colors = cli::truecolor,
+      asciicast_theme = list(background = c(255, 255, 255))
+    )
+  })
+)
+library(lgbthue)
 options(lgbthue_font_size = 1.7)
 set.seed(123L)
 ```
@@ -39,14 +52,13 @@ pak::pak("turtletopia/lgbthue")
 
 To list all available palettes, call `show_pride()`. The output would be very long, however, so I'm not including the result. Instead, know it is possible to filter by tags and palette sizes:
 
-```{r pride_filtered}
-library(lgbthue)
+```{asciicast pride_filtered}
 show_pride(tags = "rainbow", sizes = c(6, 8))
 ```
 
 Accessing one of these is best done by `palette_lgbtq()`:
 
-```{r palette_lgbtq}
+```{asciicast palette_lgbtq}
 palette_lgbtq("lesbian")
 ```
 
@@ -63,7 +75,7 @@ If you wish to use these palettes with ggplot2, [gglgbtq](https://github.com/tur
 
 Moreover, as a palette draws from the colors of a flag, a `seq()` method is provided that transforms a palette into a sequence so that e.g. a vertical bar with correct flag colors can be shown:
 
-```{r seq}
+```{asciicast seq}
 seq(palette_lgbtq("trans"))
 ```
 
